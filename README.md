@@ -10,12 +10,14 @@ Setelah  menjalankan program muncul pilihan, pilihlah sesuai kebutuhan anda
 0 untuk keluar
 Setelah memilih 1 atau 2 lalu masukkan teks yang ingin di enkripsi atau dekripsi
 
-![image](https://github.com/hoshizaqi/affine_cipher_subs/assets/107735381/9bb1849f-21c4-45bb-a241-f415bfb7417f)
+![Screenshot 2023-10-24 222310](https://github.com/hoshizaqi/affine_cipher_subs/assets/107735381/e9d01f60-2b28-4eab-b1db-a6092c144fc2)
+
 
 proses enkripsi:
 
 
-![image](https://github.com/hoshizaqi/affine_cipher_subs/assets/107735381/bc87c328-704d-4d60-a7c9-b7324cda4778)
+![Screenshot 2023-10-24 222827](https://github.com/hoshizaqi/affine_cipher_subs/assets/107735381/a9a5edfd-0637-4770-8cd2-c7009fb5211c)
+
 
 proses dekripsi:
 
