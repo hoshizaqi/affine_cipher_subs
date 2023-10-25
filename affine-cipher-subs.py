@@ -1,4 +1,4 @@
-# Extended Euclidean Algorithm for finding modular inverse
+# Extended Euclidean Algorithm untuk menemukan invers modulo
 def egcd(a, b):
     x, y, u, v = 0, 1, 1, 0
     while a != 0:
@@ -8,15 +8,16 @@ def egcd(a, b):
     gcd = b
     return gcd, x, y
 
+# Fungsi modinv untuk menghitung invers modulo
 def modinv(a, m):
     gcd, x, y = egcd(a, m)
     if gcd != 1:
-        return None  # modular inverse does not exist
+        return None   # invers modulo tidak ada
     else:
         return x % m
 
-# Custom affine cipher encryption function
-# returns the cipher text
+# Fungsi enkripsi Affine Cipher kustom
+# mengembalikan teks terenkripsi
 def custom_affine_encrypt(text, key):
     """
     C = (a * P + b) % 26
@@ -24,8 +25,8 @@ def custom_affine_encrypt(text, key):
     alphabet = "qazplmnkoxswdcejbirhvuygft"
     return ''.join([alphabet[((key[0] * alphabet.index(t) + key[1]) % 26)] for t in text.lower() if t in alphabet])
 
-# Custom affine cipher decryption function
-# returns the original text
+# Fungsi dekripsi Affine Cipher kustom
+# mengembalikan teks asli
 def custom_affine_decrypt(cipher, key):
     """
     P = (a^-1 * (C - b)) % 26
@@ -33,7 +34,7 @@ def custom_affine_decrypt(cipher, key):
     alphabet = "qazplmnkoxswdcejbirhvuygft"
     return ''.join([alphabet[((modinv(key[0], 26) * (alphabet.index(c) - key[1])) % 26)] for c in cipher if c in alphabet])
 
-# Function to perform encryption or decryption based on the mode
+# Fungsi untuk melakukan enkripsi atau dekripsi berdasarkan mode
 def perform_custom_affine(text, key, mode):
     if mode == '1':
         return custom_affine_encrypt(text, key)
@@ -42,7 +43,7 @@ def perform_custom_affine(text, key, mode):
     else:
         return 'Pilihan tidak ada!'
 
-# Driver Code to test the above functions
+# Driver Code untuk menguji fungsi-fungsi di atas
 def main():
     while True:
         mode = input('1 untuk "enkripsi"\n2 untuk"dekripsi"\n0 untuk keluar\nmasukkan angka: ')
